@@ -1,4 +1,4 @@
-import kotlin.math.*
+import kotlin.math.pow
 fun main() {
 
     println("Enter amount of principal originally deposited into account: ")
@@ -10,7 +10,7 @@ fun main() {
     println("Enter the number of years the account will be left to earn interest: ")
     val t = readLine()!!
 
-    val A = P.toDouble() * Math.pow((1 + r.toDouble()/100.00),t.toDouble()) - P
+    val A = P.toDouble() * Math.pow((1 + r.toDouble()/100.00),t.toDouble())
 
     println("Amount of money in the account after $t is $A.")
 }
