@@ -1,7 +1,7 @@
 fun main() {
 
     println("Enter the name of your favorite city: ")
-    val cityName: String = readLine()
+    val cityName: String = readLine()!!
 
     println(cityName.length)
     println(cityName.toUpperCase())
