@@ -3,7 +3,6 @@ import java.util.Scanner
 fun main() {
     val scanner = Scanner(System.`in`)
 
-    // Ask for runner names and race times
     print("Enter the name of runner 1: ")
     val runner1_name = scanner.nextLine()
     print("Enter the race time for runner 1 (in minutes): ")
@@ -19,17 +18,14 @@ fun main() {
     print("Enter the race time for runner 3 (in minutes): ")
     val runner3_time = scanner.nextDouble()
 
-    // Determine the order of finish
     val runners = listOf(
         Pair(runner1_name, runner1_time),
         Pair(runner2_name, runner2_time),
         Pair(runner3_name, runner3_time)
     ).sortedBy { it.second }
 
-    // Display the names of the runners in order of finish
     println("The runners finished in the following order:")
     for (i in runners.indices) {
         println("${i+1}. ${runners[i].first}")
     }
 }
-
